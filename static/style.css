@@ -1,0 +1,62 @@
+nav {
+	min-height: 50px;
+}
+.nav-wrapper {
+    background-color: #6774ff;
+}
+
+nav a {
+	margin: 8px 10px 15px;
+	text-decoration: none;
+	font-weight: bold;
+    font-size: 25px;
+}
+
+.right:hover {
+	color: #c9d7ff; 
+}
+
+.btn:hover {
+	background-color: #858fff;
+}
+
+.input-field input[type=text]:focus + label {
+     color: #6774ff;
+}
+
+.input-field input[type=text]:focus {
+	 border-bottom: 1px solid #6774ff;
+	 box-shadow: 0 1px 0 0 #6774ff;
+}
+
+.input-field input[type=email]:focus + label {
+     color: #6774ff;
+}
+
+.input-field input[type=email]:focus {
+	 border-bottom: 1px solid #6774ff;
+	 box-shadow: 0 1px 0 0 #6774ff;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	letter-spacing: 1px;
+    font-size: 30px;
+    color: #172696;
+}
+
+.card {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+    font-size: 20px;
+    color: #172696;
+}
+
+.profilepic {
+	max-height: 500px;
+	max-width: 500px;
+}
+/* <img src="https://media.tenor.com/images/d00bd94dc3e8ca73001adf7657f2ed13/tenor.gif" style="height: : 50%; width: 50%; > */
+/* <img src="https://media.giphy.com/media/tlGD7PDy1w8fK/giphy.gif" style="height: : 50%; width: 50%; text-align: center;> */
+		

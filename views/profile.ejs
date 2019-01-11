@@ -1,0 +1,22 @@
+<h1>profile page</h1>
+
+<div class="row">
+    <div class="col s4">
+            <img style='height: 100%; width: 100%; object-fit: contain' src="<%= user.image %>">
+    </div>
+</div>
+
+<div class="row">
+    <div>
+            <p><strong>Name:</strong> <%= user.firstname %> <%= user.lastname %></p>
+            <p><strong>Display Name:</strong> <%= user.username %></p>
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="col s12">
+        <h3> <%= user.firstname %>'s Bio</h3>
+        <hr>
+        <p> <%= user.bio %> </p>
+    </div>
+</div>
