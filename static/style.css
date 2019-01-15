@@ -2,14 +2,58 @@ nav {
 	min-height: 50px;
 }
 .nav-wrapper {
-    background-color: #6774ff;
+	background-color: rgb(41, 41, 41);
+	
 }
+
+.brand-logo {
+	color: #d42aff !important;
+}
+
+.menu2 {
+	color: #d42aff !important;
+}
+
+.alertIcon {
+	margin: 5px;
+	height: 75px;
+}
+
+.alert {
+	background-color: #424242 !important;
+	padding-bottom: 25px;
+}
+
+.facebookbutton {
+	background-image: url('../img/facebook-sign-in-button.png');
+}
+
+/* button {
+	background-color: #d42aff !important;
+} */
+
+.datepicker-date-display {
+	background-color: #d42aff !important;
+}
+
+.datepicker-table td.is-selected {
+	background-color: #d42aff !important;
+}
+
+/* .datepicker-table td.is-today {
+	color: 
+} */
 
 nav a {
 	margin: 8px 10px 15px;
 	text-decoration: none;
 	font-weight: bold;
     font-size: 25px;
+}
+
+.input-field>label {
+	font-weight: 400;
+    font-size: 10px;
 }
 
 .right:hover {
@@ -40,12 +84,17 @@ nav a {
 
 body {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
-	letter-spacing: 1px;
-    font-size: 30px;
-    color: #172696;
+	/* font-weight: 800;
+	letter-spacing: 1px; */
+    /* font-size: 30px; */
+	color: #d42aff;
+	background-color: rgb(41, 41, 41);
 }
 
+.btn {
+	background-color: #d42aff !important;
+}
+		  
 .card {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
@@ -53,10 +102,24 @@ body {
     color: #172696;
 }
 
-.profilepic {
+/* .profilepic {
 	max-height: 500px;
 	max-width: 500px;
+} */
+
+.profile {
+	background-color: rgb(41, 41, 41);
+	border: transparent 10px solid;
+	border-radius: 20px;
+	height: 450px;
 }
-/* <img src="https://media.tenor.com/images/d00bd94dc3e8ca73001adf7657f2ed13/tenor.gif" style="height: : 50%; width: 50%; > */
-/* <img src="https://media.giphy.com/media/tlGD7PDy1w8fK/giphy.gif" style="height: : 50%; width: 50%; text-align: center;> */
-		
+
+.fh5co-loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(/img/loader.gif) center no-repeat #fff;
+ }

@@ -1,0 +1,31 @@
+<div class="navbar">
+    <nav>
+      <div class="nav-wrapper darken-3">
+        <a href="/" class="brand-logo center">Crypt<i class="material-icons">attach_money</i>Folio</a>
+         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="menu1" class="left hide-on-med-and-down">
+          <%if (!currentUser) { %>
+          <li><a class="menu2" href="/auth/signup">Sign up</a></li>
+          <li><a class="menu2" href="/auth/login">Login</a></li>
+          <% } %>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <%if (currentUser) { %>
+        	<li><a class="menu2" href="/auth/logout">Logout</a></li>
+          <% } %>
+        	<li><a class="menu2" href="/profile">Your Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="side-nav grey lighten-4" id="mobile-demo">
+	<li><a href="/profile">Your Profile</a></li>
+  <%if (currentUser) { %>
+    <li><a href="/auth/logout">Logout</a></li>
+  <% } %>
+  <%if (!currentUser) { %>
+  	<li><a href="/auth/signup">Sign up</a></li>
+  	<li><a href="/auth/login">Login</a></li>
+  <% } %>
+  </ul>
+  

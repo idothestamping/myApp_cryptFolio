@@ -1,18 +1,19 @@
 var db = require('../models');
 
-db.movie.create({
-	title: 'Die Hard',
-	year: 1998,
-	genre: 'Christmas',
-	runtime: 110,
-	tagline: 'Yippie Yai-ye...'
+db.cointype.create({
+	code: 'OMT',
+	name: 'Original Money Talks Coin',
+	statuses: [
+		"primary",
+		"secondary"
+		]
 })
 
 .then(function(createdMovie){
-	console.log('Successfully created movie');
+	console.log('Successfully created coin');
 })
 
 .catch(function(err){
-	console.log('Successfully created movie', err);
+	console.log('Error during test migration:', err);
 });
 

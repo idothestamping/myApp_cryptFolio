@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Auth Boilerplate</title>
+	<title>OMT-CryptFolio</title>
 	<link rel="stylesheet" type="text/css" href="/style.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
 </head>
+<header class='header'> <% include partials/navbar %> </header>
 <body>
-	<nav class="nav-wrapper">
-		<% if(!user){ %>
-		<a href='/auth/login' class="right">Login</a>
-		<a href='/auth/signup' class="right">Signup</a>
-		<% } else { %>
-			<% if(user.admin) { %>
-			<a href='/profiles/admin' class="right">Admin Page</a>
-			<% } %>
-			<a href='/auth/logout' class="right">Logout</a>
-		<% } %>
-		<a href='/' class="right">Home</a>
-	</nav>
+	<div class="fh5co-loader"></div>
 	<div class="container">
 	<% include partials/alerts %>
 	<%- body %>
@@ -34,7 +23,9 @@
 			yearRange: 50,
 			autoClose: false
  		 });
-  });
-</script>
+  	});
+	</script>
 </body>
 </html>
+
+

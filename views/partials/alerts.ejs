@@ -1,40 +1,29 @@
-<% if(alerts.error) {%>
-	<% alerts.error.forEach(function(msg){ %>
-		<div class="row">
-				<div class="col s12 m5">
-					<div class="card-panel red">
-		          									<span class="card-title">Try Again!
-							</span>
-							<p><%= msg %></p>
-							<% }); %>
-							<div class="card-action">
-									<p class="closeable">Close</p>
-								 </div>
-						</div>
-					</div>
-				</div>
+<% if(alerts.error) { %>
+	<% alerts.error.forEach(function(message) { %>
+		<div class='alert lighten-2 center form-background z-depth-5'>
+			<h5>Oops! <%=message%> </h5>
+			<img class='alertIcon' src='https://png.pngtree.com/svg/20160428/logged_in__307442.png' alt='broken link'>
+			<br>
+			<button type='button' class='btn-large lighten-2 okay'>Okay</button>
+		</div>
+	<% }) %>
 <% } %>
 
-<% if(alerts.success) {%>
-	<% alerts.success.forEach(function(msg){ %>
-		<div class="row">
-				<div class="col s12 m5">
-					<div class="card-panel teal">
-												<span class="white-text"></span>Success!</span>
-							<p><%= msg %></p>
-							<% }); %>
-							<div class="card-action">
-									<p class="closeable">Close</p>
-								 </div>
-						</div>
-					</div>
-				</div>
-
+<% if(alerts.success) { %>
+	<% alerts.success.forEach(function(message) { %>
+		<div class='alert lighten-3 center form-background z-depth-5'>
+			<h5>Success! <%=message%></h5>
+			<img class='alertIcon' src='https://png.pngtree.com/svg/20160428/logged_in__307442.png' alt='broken link'>
+			<br>
+			<button type='button' class='btn-large lighten-2 okay'>Okay</button>
+		</div>
+	<% }) %>
 <% } %>
+
 <script>
-	[...document.getElementsByClassName('closeable')].forEach(function(element){
-		element.addEventListener('click', function(){
-			document.getElementsByClassName('card')[0].style.display = 'none';
+		[...document.getElementsByClassName('okay')].forEach(function(element){
+			element.addEventListener('click', function(){
+				document.getElementsByClassName('alert')[0].style.display = 'none';
+			});
 		});
-	});
-</script>
+	</script>
