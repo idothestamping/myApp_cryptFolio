@@ -44,7 +44,9 @@ router.get('/', function(req, res) {
       if(body){
           coinList.rows.forEach(function(c){
               db.cointype.findOrCreate({
-                  where: { code: c.code },
+                  where: { 
+                      code: c.code,
+                 },
                   defaults: {
                       name: c.name,
                       statuses: c.statuses

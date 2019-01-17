@@ -34,34 +34,34 @@
     <p class='instructions z-depth-5'><i class="material-icons white-text text-darken-2">monetization_on</i>Search for your currency...fjalsdfka</p>
 </div>
                 
+<div class="row">
+        <div class="col s12">
+            <form action='/main' method='GET'></form>
+            
+                    <div class="input-field">
+                        <input id="search" class="z-depth-3" type="search" name='search' placeholder='Search by Name or Ticker' required>
+                        <label class="label-icon" for="search"></label>
+                        <i class="material-icons magnifying white-text text-darken-2">search</i>
+                    </div>
+        </div>
+        <div class='col s12 profile center'>
+                    <div class="input-field">
+                        <select name='selectionbox' class="browser-default selectionbox black-text z-depth-3">
+                        <option value="null" selected>Pairs</option>
+                        <option value="btc">BTC</option>
+                        <option value="eth">ETH</option>
+                        <option value="xrp">XRP</option>
+                        </select>
+                    </div>
+        </div>
+        <div class='col s12 profile center'>
+                        <button class="btn btn-large waves-effect waves-light z-depth-3" type="submit" name="action">Search
+                        <!-- <i class="material-icons">Search</i> -->
+                        </button>
+        </div>
+            </form>
 
-<div class="row mainsearch">
-    <div class="col s12">
-        <form action='/main' method='GET'>
-            <div class="row">
-            	<div class="col s4 input-field">
-                    <input id="search" class="z-depth-3" type="search" name='search' placeholder='Search by Name or Ticker' required>
-                    <label class="label-icon" for="search"></label>
-                    <i class="material-icons magnifying white-text text-darken-2">search</i>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s4 input-field">
-                    <select name='selectionbox' class="browser-default selectionbox black-text z-depth-3">
-                    <option value="null" selected>Pairs</option>
-                    <option value="btc">BTC</option>
-                    <option value="eth">ETH</option>
-                    <option value="xrp">XRP</option>
-                     </select>
-                </div>
-                 <div class="col s2 input-field">
-                     <button class="btn btn-large waves-effect waves-light z-depth-3" type="submit" name="action">Search
-                        <i class="material-icons right">Search</i>
-                     </button>
-                </div>
-            </div>
-         </form>
-    </div>
+
 </div>
 
 

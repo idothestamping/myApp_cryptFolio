@@ -40,14 +40,22 @@ app.get('/main', loggedin, function(req, res) {
 	db.cointype.findAll().then(function(coin) {
 		console.log(coin);
 		res.render('main', {coin: coin});
+
 	})
 });
-
+app.use(function(req, res, next) {
+	for (var key in req.query)
+	{ 
+	  req.query[key.toLowerCase()] = req.query[key];
+	}
+	next();
+  });
 
 app.use('/auth', require('./controller/auth'));
 app.use('/profile', require('./controller/profiles'));
 app.use('/coinlist', require('./controller/coinlist'));
 app.use('/main', require('./controller/main'));
+app.use('/coindetail', require('./controller/coindetail'));
 
 var server = app.listen(process.env.PORT || 3000);
 
