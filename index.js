@@ -15,7 +15,7 @@ global.fetch = require('node-fetch')
 
 app.set('view engine', 'ejs');
 app.use(layouts);
-app.use('/', express.static('./public'));
+app.use('/', express.static('public'));
 app.use(favicon(__dirname + '/public/img/fingerheart.ico'));
 app.use(parser.urlencoded({ extended: false }));
 // order matters here for session, before flash
@@ -36,7 +36,7 @@ app.use(function(req, res, next){
 app.get('/', function(req, res) {
 	console.log('LOADING ROUTE - HOME PAGE')
 	res.render('index');
-  });
+});
 
 
 
