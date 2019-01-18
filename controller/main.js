@@ -68,12 +68,12 @@ router.post('/result', loggedIn, function(req, res) {
 cc.coinList()
 .then(coinList => {
     res.render('coins/show', { 
-        coinDetail: coinList.Data.searchname
+        coinDetail: coinList.BTC
     });
 
 
   // ->
-  // {
+  // 
   //   BTC: {
   //    Id: "1182",
   //    Url: "/coins/btc/overview",

@@ -52,6 +52,8 @@ app.use('/coinlist', require('./controller/coinlist'));
 app.use('/main', require('./controller/main'));
 app.use('/coindetail', require('./controller/coindetail'));
 
-var server = app.listen(process.env.PORT || 3000);
+var server = app.listen(process.env.PORT || 3000, function(){
+	console.log("Hello World!");
+});
 
 module.exports = server;
