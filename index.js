@@ -38,6 +38,7 @@ app.get('/', function(req, res) {
   });
 
 
+
 // app.use(function(req, res, next) {
 // 	for (var key in req.query)
 // 	{ 
@@ -52,7 +53,7 @@ app.use('/coinlist', require('./controller/coinlist'));
 app.use('/main', require('./controller/main'));
 app.use('/coindetail', require('./controller/coindetail'));
 
-var server = app.listen(process.env.port || 3000, function(){
+var server = app.listen(process.env.PORT || 3000, function(){
 	console.log("Hello World!");
 });
 
