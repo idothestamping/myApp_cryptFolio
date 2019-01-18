@@ -34,6 +34,7 @@ app.use(function(req, res, next){
 });
 
 app.get('/', function(req, res) {
+	console.log('LOADING ROUTE - HOME PAGE')
 	res.render('index');
   });
 
