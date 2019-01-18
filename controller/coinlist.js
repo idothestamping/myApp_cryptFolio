@@ -15,15 +15,10 @@ router.get('/refreshcointable', function(req, res) {
         if(body){
             coinList.rows.forEach(function(c){
                 db.cointype.findOrCreate({
-                    where: { code: c.code },
-                    defaults: {
-                        name: c.name,
-                        statuses: c.statuses
-                    }
+                    where: { code: c.code }
                   }).then(function(data) {
-                      console.log(data);
-                      res.send(coinList)
-                    //   res.redirect('profile');
+                      console.log("refresh complete");
+                      res.redirect('/profile');
                   }).catch(function(error) {
                       console.log('this is the error ' + error);
                   });
@@ -36,34 +31,32 @@ router.get('/refreshcointable', function(req, res) {
       });
 });
 
-router.get('/', function(req, res) {
-    request(apiCoinList, function(error, response, body) {
-      var coinList = JSON.parse(body);
-      console.log(coinList);
-      // console.log('API call response:', body);
-      if(body){
-          coinList.rows.forEach(function(c){
-              db.cointype.findOrCreate({
-                  where: { 
-                      code: c.code,
-                 },
-                  defaults: {
-                      name: c.name,
-                      statuses: c.statuses
-                  }
-                }).then(function(data) {
-                    console.log(data);
-                    res.send(coinList)
-                  //   res.redirect('profile');
-                }).catch(function(error) {
-                    console.log('this is the error ' + error);
-                });
-          })   
-      }
-      else if(error){
-          console.log(error);
-          res.send('error')
-      }
-    });
-});
+// router.get('/', function(req, res) {
+//     request(apiCoinList, function(error, response, body) {
+//       var coinList = JSON.parse(body);
+//       console.log(coinList);
+//       // console.log('API call response:', body);
+//       if(body){
+//           coinList.rows.forEach(function(c){
+//               db.cointype.findOrCreate({
+//                   where: { code: c.code },
+//                   defaults: {
+//                       name: c.name,
+//                       statuses: c.statuses
+//                   }
+//                 }).then(function(data) {
+//                     console.log(data);
+//                     res.send(coinList)
+//                   //   res.redirect('profile');
+//                 }).catch(function(error) {
+//                     console.log('this is the error ' + error);
+//                 });
+//           })   
+//       }
+//       else if(error){
+//           console.log(error);
+//           res.send('error')
+//       }
+//     });
+// });
 module.exports = router;

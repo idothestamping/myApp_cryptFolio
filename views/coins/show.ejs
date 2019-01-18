@@ -1,0 +1,25 @@
+<div class="row">
+        <div class="col s6">
+        <form action='/coindetail' method='POST'>
+            <div class="input-field" id="searchbaronmain">
+                <input id="search" class="z-depth-3" type="search" name='search' placeholder='Search by Name or TickerID' required>
+                <label class="label-icon" for="search"></label>
+                <i class="material-icons magnifying white-text text-darken-2">search</i>
+            </div>
+        </div>
+        <div class='col s6'>
+            <button class="btn waves-effect waves-light z-depth-3" type="submit" name="action">Submit</button>
+        </div>
+        </form>  
+    </div> 
+
+<h1>Track Your Investments</h1>
+<div class='row'>
+        <div class='col s12 m6 l5'>
+            <p><span>Name: </span> <%= coinDetail.CoinName %></p>
+            <p><span>Price: </span> <%= coinDetail.Symbol %></p>
+            <p><span>Volume: </span> <%= coinDetail.Algorithm %></p>
+            <p><span>24 hour Change: </span> <%= coinDetail.TotalCoinSupply %></p>
+            </div>
+
+</div>

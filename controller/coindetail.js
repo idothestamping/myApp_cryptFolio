@@ -9,13 +9,15 @@ var router = express.Router();
 
 router.post('/', function(req, res) {
     console.log(req.body.selectionbox);
-    var searchUrl = "https://api.cryptonator.com/api/full/" + req.body.selectionbox + "-usd"
+    var searchUrl = "https://api.cryptonator.com/api/full/" + req.body.search.toUpperCase() + "-usd"
     console.log(searchUrl);
     request(searchUrl, function(error, response, body) {
       var coinDetail = JSON.parse(body);
       console.log('API call response:', body);
       if(body){
-    	res.render('coins/show', { coinDetail: coinDetail });
+        res.render('coins/show', { 
+            coinDetail: coinDetail });
+        console.log("am i here?");
       }
       else if(error){
           console.log(error);

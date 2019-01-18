@@ -11,6 +11,7 @@ var passport = require('./config/passportConfig');
 var loggedin = require('./middleware/loggedin');
 var db= require('./models');
 var app = express();
+global.fetch = require('node-fetch')
 
 app.set('view engine', 'ejs');
 app.use(layouts);
@@ -36,20 +37,14 @@ app.get('/', function(req, res) {
 	res.render('index');
   });
 
-app.get('/main', loggedin, function(req, res) {
-	db.cointype.findAll().then(function(coin) {
-		console.log(coin);
-		res.render('main', {coin: coin});
 
-	})
-});
-app.use(function(req, res, next) {
-	for (var key in req.query)
-	{ 
-	  req.query[key.toLowerCase()] = req.query[key];
-	}
-	next();
-  });
+// app.use(function(req, res, next) {
+// 	for (var key in req.query)
+// 	{ 
+// 	  req.query[key.toLowerCase()] = req.query[key];
+// 	}
+// 	next();
+//   });
 
 app.use('/auth', require('./controller/auth'));
 app.use('/profile', require('./controller/profiles'));
