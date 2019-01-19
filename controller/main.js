@@ -65,13 +65,12 @@ router.get('/admins', function(req, res){
 
 router.post('/result', loggedIn, function(req, res) {
     var searchname = req.body.search.toUpperCase()
-cc.coinList()
-.then(coinList => {
-    res.render('coins/show', { 
-        coinDetail: coinList.BTC
-    });
-
-
+    console.log(searchname)
+    cc.coinList()
+    .then(coinList => {
+        res.render('coins/show', { 
+            coinDetail: coinList.Data[searchname]
+        });
   // ->
   // 
   //   BTC: {
@@ -96,5 +95,25 @@ cc.coinList()
 })
 .catch(console.error)
 });
+
+
+router.post('/favorite', function(req, res) {
+    console.log("we here now", req.body)
+    // TODO: Get form data and add a new record to DB
+    // db.coin.findOrCreate({ 
+    //     where: { name: req.body.name }
+    //     })
+    // .spread( function(pokemon, created) {
+    //     console.log(pokemon.get());
+    //     res.redirect('/pokemon');
+    // })
+    // .catch( function(error){
+    //   console.log("error", error);
+    //   res.render('error')
+    // })
+  
+  });
+
+
 
 module.exports = router;

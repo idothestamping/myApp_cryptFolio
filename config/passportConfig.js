@@ -12,6 +12,7 @@ passport.serializeUser(function(user, callback){
 var FacebookStrategy = require('passport-facebook').Strategy;
 
 passport.deserializeUser(function(id, callback){
+    console.log("FIRST")
     db.user.findByPk(id)
     .then(function(user){
         callback(null, user);
@@ -25,6 +26,7 @@ passport.use(new LocalStrategy({
     usernameField: 'email',
     passportField: 'password'
 }, function(email, password, callback){
+    console.log("SECOND")
     db.user.findOne({
         where: { email: email }
     })
@@ -54,10 +56,12 @@ passport.use(new FacebookStrategy({
     // Email presence check
     var facebookEmail = profile.emails && profile.emails.length > 0 ? profile.emails[0].value : null;
     // See if the email exist in the users table
+    console.log("THIRD")
     db.user.findOne({
         where: { email: facebookEmail }
     })
     .then(function(existingUser){
+        console.log("FOUND THIRD")
         if(existingUser && facebookEmail){
             // Returning user - need to update facebookId and Token
             existingUser.updateAttributes({
@@ -74,6 +78,7 @@ passport.use(new FacebookStrategy({
             var usernameArr = profile.displayName.split(' ');
             var photo = profile.photos && profile.photos.length > 0 ? profile.photos[0].value : 'https://png.icons8.com/ios/1600/person-female-filled.png'
             ;
+            console.log("FOURTH")
             db.user.findOrCreate({
                 where: { facebookId: profile.id },
                 defaults: {
