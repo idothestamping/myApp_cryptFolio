@@ -5,10 +5,10 @@ $(window).load(function() {
 
 $(document).ready(function(){
     $('.sidenav').sidenav();
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true,
-        indicators: true
-    });    
+    $('.carousel').carousel({fullWidth: true});
+    setInterval(function() {
+        $('.carousel').carousel('next');
+    }, 3000);
   });
     
 
@@ -19,4 +19,5 @@ document.addEventListener('DOMContentLoaded', function() {
         autoClose: false
       });
   });
+
 

@@ -64,10 +64,7 @@ nav a {
 	margin: 0;
 }
 
-.input-field>label {
-	font-weight: 400;
-    font-size: 20px;
-}
+
 
 /* .right:hover {
 	color: #c9d7ff; 
@@ -178,4 +175,43 @@ body {
 	margin: 15px;
 }
 
+.carousel {
+	/* margin-top: 40px; */
+	border-radius: 5px;
+}
 
+.carousel-item {
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-fixed-item h1 {
+	font-family: 'EB Garamond', serif;
+	text-shadow: 3px 3px 4px #323232;
+	color: white;
+}
+
+.carousel-fixed-item p {
+	background-color: rgba(0,0,0,0.4);
+
+}
+
+/* .favecard {
+	margin: 10px;
+} */
+
+.responsive-img {
+	height: 75px;
+	width: 75px;
+	
+}
+.cardcolor { 
+	background-color: #3b3b3b !important;
+}
+.collection {
+	border-color: #282828 !important;
+}
+
+.secondary-content {
+	border-color: #3b3b3b !important;
+}

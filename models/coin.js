@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     IsTrading: DataTypes.BOOLEAN,
     TotalCoinsMined: DataTypes.STRING,
     BlockNumber: DataTypes.INTEGER,
-    NetHashesPerSecond: DataTypes.INTEGER,
+    NetHashesPerSecond: DataTypes.DECIMAL,
     BlockReward: DataTypes.INTEGER,
     BlockTime: DataTypes.INTEGER
   }, {});

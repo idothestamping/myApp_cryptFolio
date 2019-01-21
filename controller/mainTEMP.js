@@ -6,6 +6,15 @@ var request = require('request');
 var loggedIn = require('../middleware/loggedin');
 var isAdmin = require('../middleware/isAdmin');
 
+
+<% if (!currentUser) { %>
+    <a href = '/auth/signup' class="btn waves-effect green accent-4 white-text darken-text-2">Sign Up!</a>
+    <% } %>
+
+    <% if (currentUser) { %>
+  <a href = '/profile' class="btn waves-effect green accent-4 white-text darken-text-2">Go To Profile</a>
+  <% } %>
+  
 <div class="row">
 <div class='col s6'>
         <form action="/main/result" method='POST'>   
@@ -101,3 +110,18 @@ router.get('/admins', function(req, res){
 
 
           module.exports = router;
+
+
+
+
+
+          <div class='col s12 m3 l9'>
+             <div class='coin-detail'>
+             <a href='https://www.cryptocompare.com<%= favcoin.Url %>'>Link to Source</a></h5>
+                    <p style="text-align:left;">Symbol:<span style="float:right;"><%= favcoin.Symbol %></span></p>
+                    <p style="text-align:left;">Algorithm:<span style="float:right;"><%= favcoin.Algorithm %></span></p>
+                    <p style="text-align:left;">TotalCoinSupply:<span style="float:right;"><%= favcoin.TotalCoinSupply %></span></p>
+                    <p style="text-align:left;">TotalCoinsMined:<span style="float:right;"><%= favcoin.TotalCoinsMined %></span></p>
+                    <p style="text-align:left;">SmartContractAddress:<span style="float:right;"><%= favcoin.SmartContractAddress %></span></p>
+                    <p style="text-align:left;">BlockReward:<span style="float:right;"><%= favcoin.BlockReward %></span></p>
+            </div>

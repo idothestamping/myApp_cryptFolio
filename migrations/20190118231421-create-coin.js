@@ -69,7 +69,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       NetHashesPerSecond: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DECIMAL
       },
       BlockReward: {
         type: Sequelize.INTEGER
