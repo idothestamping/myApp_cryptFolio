@@ -1,0 +1,20 @@
+<div class="se-pre-con"></div>
+<div class="row">
+        <h4>Latest News: </h4>
+  <% newsResult.forEach(function(newsResult) { %>    
+          <div class="col s12 m4">
+            <div class="card medium">
+              <div class="card-image">
+                <img src="<%= newsResult.imageurl %>">
+                <span class="card-title"><%= newsResult.title %></span>
+              </div>
+              <div class="card-content">
+                <p><%= newsResult.body %></p>
+              </div>
+              <div class="card-action">
+                <a href="<%= newsResult.url %>">Read more</a>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>

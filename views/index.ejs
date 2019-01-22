@@ -1,66 +1,46 @@
 <div class="se-pre-con"></div>
-<!-- <h1>Home Page NOT logged in</h1> -->
 
 <div class='row center'>
-        <div class='carouseltop col s12 m12 l12'>
-          <div class="carousel carousel-slider center z-depth-5" data-indicators='true'>
-              <div class="carousel-fixed-item center">
-                        <h1>Track Your Investments</h1>
-                    <p class='flow-text white-text'>Keep track of your digital assets!</p>
-                    <% if (!currentUser) { %>
-                        <a href = '/auth/signup' class="btn waves-effect accent-4 white-text darken-text-2">Sign Up!</a>
-                        <% } %>
-
-                        <% if (currentUser) { %>
-                    <a href = '/main' class="btn waves-effect accent-4 white-text darken-text-2">Go To Profile</a>
+    <div class='carouseltop col s12 m12 l12'>
+        <div class="carousel carousel-slider center z-depth-5" data-indicators='true'>
+            <div class="carousel-fixed-item center">
+                    <h1>Track Your Investments</h1>
+                <p class='flow-text white-text'>Keep track of your digital assets!</p>
+                <% if (!currentUser) { %>
+                    <a href = '/auth/signup' class="btn waves-effect accent-4 white-text darken-text-2">Sign Up!</a>
                     <% } %>
-                </div>
-                    <a class="carousel-item" href="#one!">
-                        <img class='responsive-img' src="/img/stock/2.jpeg"></a>
-                    <a class="carousel-item" href="#two!">
-                        <img class='responsive-img' src="/img/stock/3.jpg"></a>
-                    <a class="carousel-item" href="#three!">
-                        <img class='responsive-img' src="/img/stock/3.png"></a>
-                    <a class="carousel-item" href="#four!">
-                        <img class='responsive-img' src="/img/stock/4.png"></a>
 
-                    </div>
+                    <% if (currentUser) { %>
+                <a href = '/main' class="btn waves-effect accent-4 white-text darken-text-2">Go To Profile</a>
+                <% } %>
+            </div>
+                <a class="carousel-item" href="#one!">
+                    <img class='responsive-img' src="/img/stock/2.jpeg"></a>
+                <a class="carousel-item" href="#two!">
+                    <img class='responsive-img' src="/img/stock/3.jpg"></a>
+                <a class="carousel-item" href="#three!">
+                    <img class='responsive-img' src="/img/stock/3.png"></a>
+                <a class="carousel-item" href="#four!">
+                    <img class='responsive-img' src="/img/stock/4.png"></a>
                 </div>
             </div>
-                
+        </div>
+
+<hr>
+<br>
 <div class='row center'> 
-    <br>
-    <p class='instructions z-depth-5'><i class="material-icons white-text text-darken-2">monetization_on</i>Search for your currency...fjalsdfka</p>
-</div>
-                
-<div class="row">
-        <div class="col s12">
-            <form action='/main' method='GET'></form>
-            
-                    <div class="input-field">
-                        <input id="search" class="z-depth-3" type="search" name='search' placeholder='Search by Name or Ticker' required>
-                        <label class="label-icon" for="search"></label>
-                        <i class="material-icons magnifying white-text text-darken-2">search</i>
-                    </div>
-        </div>
-       
-                    <div class="input-field">
-                        <select name='selectionbox' class="browser-default selectionbox black-text z-depth-3">
-                        <option value="null" selected>Pairs</option>
-                        <option value="btc">BTC</option>
-                        <option value="eth">ETH</option>
-                        <option value="xrp">XRP</option>
-                        </select>
-                    </div>
-                    <div class="col s2 input-field"></div>
-                        <button class="btn btn-large waves-effect waves-light z-depth-3" type="submit" name="action">Search
-                            <i class="material-icons right">Search</i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <div class="col s8">
+        <form action='/main/result' method='POST'>
+            <div class="input-field" id="searchbaronmain">
+                <input id="search" class="z-depth-3 white-text" type="search" name='search' placeholder='Search by Name or TickerID' autocomplete="off" required>
+                <label class="label-icon " for="search"></label>
+                <i class="material-icons magnifying white-text text-darken-2">search</i>
+            </div>
     </div>
+            <div class='col s4'>
+                <button class="btn waves-effect waves-light z-depth-3" type="submit" name="action">Submit</button>
+            </div>
+        </form>
 </div>
 
 

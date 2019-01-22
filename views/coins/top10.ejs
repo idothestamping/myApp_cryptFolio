@@ -1,0 +1,21 @@
+<div class="se-pre-con"></div>
+<div class='row'>
+        <div class='col s12 m6 l6'> 
+            <h4>Top 10 by 24H Volume</h4>  
+            <% top10.forEach(function(top10) { %>   
+                <ul class="collection z-depth-5">
+                    <li class="collection-item avatar cardcolor z-depth-5">
+                        <img src='https://www.cryptocompare.com<%= top10.CoinInfo.ImageUrl %>' alt="" class="circle">
+                        <span class="title"><%= top10.CoinInfo.FullName %></span>
+                            <p>Price:  <span Class="coindetails"><%= top10.DISPLAY.USD.PRICE %> </span> <br>
+                            24hr Change:  <span Class="coindetails"><%= top10.DISPLAY.USD.CHANGE24HOUR %></span>   |   <span Class="coindetails"> <%= top10.DISPLAY.USD.CHANGEPCT24HOUR %></span>%                       
+                            </p>
+                        <form method="POST" action="/main/favorite">
+                            <input name="Symbol" type="hidden" value="<%= top10.RAW.USD.FROMSYMBOL %>">
+                            <button class="secondary-content cardcolor" type="submit" ><i class="material-icons">add</i></button>
+                        </form>
+                    </li>
+                </ul>
+            <% }); %>
+        </div>
+</div>

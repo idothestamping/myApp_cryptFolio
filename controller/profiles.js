@@ -5,6 +5,7 @@ var db = require('../models');
 var loggedIn = require('../middleware/loggedin');
 var isAdmin = require('../middleware/isAdmin');
 
+// Profile Page
 router.get('/', loggedIn, function(req, res){
     res.render('profile');
 });

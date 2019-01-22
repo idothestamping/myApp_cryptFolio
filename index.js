@@ -38,21 +38,12 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-
-
-// app.use(function(req, res, next) {
-// 	for (var key in req.query)
-// 	{ 
-// 	  req.query[key.toLowerCase()] = req.query[key];
-// 	}
-// 	next();
-//   });
-
+app.use('/news', require('./controller/news'));
 app.use('/auth', require('./controller/auth'));
 app.use('/profile', require('./controller/profiles'));
-app.use('/coinlist', require('./controller/coinlist'));
 app.use('/main', require('./controller/main'));
-app.use('/coindetail', require('./controller/coindetail'));
+app.use('/top10', require('./controller/top10'));
+app.use('/topmarket', require('./controller/topmarket'));
 
 var server = app.listen(process.env.PORT || 3000, function(){
 	console.log("Hello World!");

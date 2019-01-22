@@ -1,0 +1,28 @@
+<div class="se-pre-con"></div>
+<div class='row'>
+    
+    <ul class="collection z-depth-5">
+        <li class="collection-item avatar cardcolor z-depth-5">
+            <img src='https://www.cryptocompare.com<%= resultCoin.USD.IMAGEURL %>' alt="" class="circle">
+            <span class="title"><%= resultCoin.USD.FROMSYMBOL %></span>
+            <p>Price:  <span Class="coindetails"><%= resultCoin.USD.PRICE %> </span> <br>
+              24hr Change:  <span Class="coindetails"><%= resultCoin.USD.CHANGE24HOUR %></span>   |   <span Class="coindetails"> <%= resultCoin.USD.CHANGEPCT24HOUR %></span>% <br>                 
+            </p>
+              <form action='/main/wallet' method='POST'>
+                <div class="input-field">
+                    <input id="wallet" class="z-depth-3 white-text" type="number" name='wallet' placeholder='Enter Amount' autocomplete="off" required>
+                    <button type="submit" ><i class="material-icons">input</i></button>
+                </div>
+                </form>
+           
+ 
+
+              <form method="POST" action="/main/delete">
+                <input name="Symbol" type="hidden" value="<%= resultCoin.USD.FROMSYMBOL %>">
+                <button class="secondary-content cardcolor" type="submit" ><i class="material-icons">check_circle</i></button>
+            </form>
+
+        </li>
+    </ul>
+
+</div>

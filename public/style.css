@@ -7,14 +7,6 @@
 	background-color: #282828;
 }
 
-/* .navbar-wrapper:hover {
-	background-color: #d42aff !important;
-} */
-
-/* .menu2 {
-	color: white !important;
-} */
-
 .alertIcon {
 	margin: 5px;
 	height: 75px;
@@ -49,9 +41,6 @@
 .datepicker-table td.is-selected {
 	background-color: #d42aff !important;
 }
-/* button {
-	background-color: white !important;
-} */
 
 nav a {
 	margin: 8px 10px 15px;
@@ -63,12 +52,6 @@ nav a {
 #searchbaronmain {
 	margin: 0;
 }
-
-
-
-/* .right:hover {
-	color: #c9d7ff; 
-} */
 
 .btn:hover {
 	background-color: #858fff;
@@ -82,6 +65,7 @@ nav a {
 .row .input-field input:focus {
 	border-bottom: 1px solid #d42aff !important;
 	box-shadow: 0 1px 0 0 #d42aff !important;
+	background-color: #282828 !important;
 }
 
 .input-field input[type=email]:focus + label {
@@ -95,9 +79,6 @@ nav a {
 
 body {
 	font-family: 'Raleway', sans-serif;
-	/* font-weight: 800;
-	letter-spacing: 1px; */
-    /* font-size: 30px; */
 	color: white;
 	background-color: rgb(41, 41, 41);
 }
@@ -118,17 +99,9 @@ body {
     color: #172696;
 }
 
-/* .profilepic {
-	max-height: 500px;
-	max-width: 500px;
-} */
-
-/* .profile {
-	background-color: rgb(41, 41, 41);
-	border: transparent 10px solid;
-	border-radius: 20px;
-	height: 450px;
-} */
+.card-title {
+	text-shadow: 3px 3px 4px #323232 !important;
+}
 
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
@@ -139,12 +112,8 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url(../img/lg.dual-ring-loader.gif) center no-repeat #282828;
+	background: url(../img/loader2.gif) center no-repeat #282828;
 }
-
-/* form {
-	margin-bottom: 5%;
-} */
 
 .datepicker-calendar-container {
 	color: black;
@@ -164,11 +133,6 @@ body {
 	  
 		 width: 100%;
 		 padding: 0;
-}
-
-.coin-detail {
-	/* font-size: 20px;
-	font-weight: 300; */
 }
 
 .btn-floating {
@@ -196,10 +160,6 @@ body {
 
 }
 
-/* .favecard {
-	margin: 10px;
-} */
-
 .responsive-img {
 	height: 75px;
 	width: 75px;
@@ -215,3 +175,10 @@ body {
 .secondary-content {
 	border-color: #3b3b3b !important;
 }
+
+.coindetails {
+	color: #eb9bff;
+	font-weight: 400;
+	font-size: 20px;
+}
+

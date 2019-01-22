@@ -1,26 +1,16 @@
 <div class="se-pre-con"></div>
 <div class='row'>
-        <div class='col s12 m12 l12 grey darken-3 z-depth-5'>
-                <form method="POST" action="/main/favorite">
-                    <input name="Symbol" type="hidden" value="<%= coinDetail.Symbol %>">
-                    <button class="btn-floating btn-small waves-effect waves-light purple accent-2" type="submit" style="float:right;"><i class="material-icons">add</i></button>
-                </form>
-                
-                         <h4 class='center'><%= coinDetail.CoinName %></h4>
-          <div class='col s12 m3 l3 center'>
-            <img class='responsive-img activator' src='https://www.cryptocompare.com<%= coinDetail.ImageUrl %>' alt='Unavailable'>
-           
-          </div>
-          
-          <div class='col s12 m3 l9'>
-             <div class='coin-detail'>
-             <a href='https://www.cryptocompare.com<%= coinDetail.Url %>'>Link to Source</a></h5>
-                    <p style="text-align:left;">Symbol:<span style="float:right;"><%= coinDetail.Symbol %></span></p>
-                    <p style="text-align:left;">Algorithm:<span style="float:right;"><%= coinDetail.Algorithm %></span></p>
-                    <p style="text-align:left;">TotalCoinSupply:<span style="float:right;"><%= coinDetail.TotalCoinSupply %></span></p>
-                    <p style="text-align:left;">TotalCoinsMined:<span style="float:right;"><%= coinDetail.TotalCoinsMined %></span></p>
-                    <p style="text-align:left;">SmartContractAddress:<span style="float:right;"><%= coinDetail.SmartContractAddress %></span></p>
-                    <p style="text-align:left;">BlockReward:<span style="float:right;"><%= coinDetail.BlockReward %></span></p>
-            </div>
-          </div>
+    <ul class="collection z-depth-5">
+        <li class="collection-item avatar cardcolor z-depth-5">
+            <img src='https://www.cryptocompare.com<%= resultCoin.USD.IMAGEURL %>' alt="" class="circle">
+            <span class="title"><%= resultCoin.USD.FROMSYMBOL %></span>
+            <p>Price:  <span Class="coindetails"><%= resultCoin.USD.PRICE %> </span> <br>
+              24hr Change:  <span Class="coindetails"><%= resultCoin.USD.CHANGE24HOUR %></span>   |   <span Class="coindetails"> <%= resultCoin.USD.CHANGEPCT24HOUR %></span>%                       
+              </p>
+            <form method="POST" action="/main/favorite">
+                <input name="Symbol" type="hidden" value="<%= resultCoin.USD.FROMSYMBOL %>">
+                <button class="secondary-content cardcolor" type="submit" ><i class="material-icons">add</i></button>
+            </form>
+        </li>
+    </ul>
 </div>
