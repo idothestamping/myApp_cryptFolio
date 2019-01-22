@@ -15,7 +15,7 @@ Main Function of this website is for cryptocurrency portfolio tracking and manag
 * P1: Save Search results as favorites
 * P2: Mobile Responsive CSS/Grid
 * P2: Additional Body Content
-    *  News
+    * News
     * Top Lists
     * Alarm (Incomplete)
 * P2: Option to Body Content results based on user criteria
@@ -31,8 +31,8 @@ Main Function of this website is for cryptocurrency portfolio tracking and manag
 
 ## My Main Thoughts:
 * I realize the scope of your project is entirely based on quality and availibity of incoming data (API)
-* Leading up to this point, I feel very confident with fundamentals of Node and it's intersting to see my regularily visited sites from a whole new perspective.
-* Beyond strech goals - I can see this project continue to grow as my interest in crypto remains same.  Some crazy goals I that comes to mind:
+* From this project, I feel very confident with the fundamentals of Node.  It's interesting to see all the sites I normally visit... I now see it from a new perspective.
+* Beyond strech goals - I can see this project continue to grow inline with my crypto interests.  Some crazy goals that comes to mind:
     * add public wallet address instead of static entry of your coin value to reflect your actual holdings
     * api trading from your exchange of choice from '/trading' route.
     * app access to link your exchange data
