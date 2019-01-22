@@ -9,6 +9,7 @@ var favicon = require('serve-favicon');
 var session = require('express-session');
 var passport = require('./config/passportConfig');
 var loggedin = require('./middleware/loggedin');
+var methodOverride = require('method-override');
 var db= require('./models');
 var app = express();
 global.fetch = require('node-fetch')
@@ -16,6 +17,7 @@ global.fetch = require('node-fetch')
 app.set('view engine', 'ejs');
 app.use(layouts);
 app.use('/', express.static('public'));
+app.use(methodOverride('_method'));
 app.use(favicon(__dirname + '/public/img/fingerheart.ico'));
 app.use(parser.urlencoded({ extended: false }));
 // order matters here for session, before flash

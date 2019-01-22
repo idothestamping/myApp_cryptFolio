@@ -101,4 +101,12 @@ router.get('/watchlist/:coindetail', function(req, res) {
 	})
 });
 
+router.delete('/', function(req, res) {
+	db.coin.destroy({
+  		where: {Name: req.body.name}
+		}).then( function() {
+  		res.redirect('/main');
+  	})
+});
+
 module.exports = router;

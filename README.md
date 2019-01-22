@@ -1,36 +1,57 @@
 # Cryptfolio
 
-Crypto Portfolio for Project 2 at General Assembly, WDI-22
+Cryptocurrency Portfolio for Project 2 at General Assembly, WDI-22
 
-bodytext
+![screen shot](https://i.imgur.com/C9BG9x7.png)
 
-![game pic](https://crackerbarrel.com/-/media/CrackerBarrel/About/Media-Kit/Fast-Facts/peg_game_346x230.jpg)
+## Main Scope
+Main Function of this website is for mimic typical stock portfolio into priorities:
+* P1: Authorization and Passport
+* P1: Layouts and Routes for following:
+    * NavBar
+    * Main Body - Display User Favorites
+* P1: Search Function
+* P1: Save Search results as favorites
+* P2: Mobile Responsive CSS/Grid
+* P2: Additional Body Content
+    *  News
+    * Top Lists
+    * Alarm (Incomplete)
+* P2: Option to Body Content results based on user criteria
+* P2: Main (Not Loggedin) Page 
+    * (Partial Complete) Needs more info
+* P3: Partial Layout: Footer (Incomplete)
 
-Play game here: [Github Deployment](https://idothestamping.github.io/myGame_trianglePeg/)
+## Strech Goals
+* P1: Add user input of coin amount for each favorite coin
+    * Change output value based on user selected currency type (USD,EUR etc.)
+* P1: Trailing price data on sparkline chart embedded for each displayed coin cards
+* P2: Option to sort coin results based on user criteria
 
-## Getting Started
-
-bodytext
-
-## How to Play
-
-bodytext
-
-* [instructables](https://www.instructables.com/id/How-to-solve-the-Triangle-Peg-Game/)
-* [wikihow](https://www.wikihow.com/Win-the-Peg-Game)
-
-## Known Bugs
-
-* bodytext
-* bodytext
-
-## Technologies Used:
-* HTML
-* CSS
+## Technologies:
+* HTML5/CSS3
 * JavaScript
 
-## External sources:
-* Google Fonts
-* W3Schools
-* StackOverflow
-* Animated gifs from various artists availble on google image search.
+## Libraries:
+* jQuery
+* Materialize
+* Bcrypt
+* Passport
+* EJS
+
+## Framework:
+* Express
+* Node
+
+## Other:
+* RESTful Routing
+* JSON
+* Encryption
+* Sessions
+
+## DataBase:
+* PostreSQL
+* Sequelize
+
+## API Souce:
+Shout out to https://www.cryptocompare.com/ for their great documentaion. 
