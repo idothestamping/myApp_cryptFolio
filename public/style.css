@@ -69,7 +69,7 @@ nav a {
 }
 
 .input-field input[type=email]:focus + label {
-     color: #6774ff;
+    color: #6774ff;
 }
 
 .input-field input[type=email]:focus {
@@ -120,19 +120,19 @@ body {
 }
 
 .mainsearch {
-		-ms-box-orient: horizontal;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: flex;
-	  
-		-webkit-justify-content: space-between; 
-		justify-content: space-between; 
-	  
-		 width: 100%;
-		 padding: 0;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-justify-content: space-between; 
+  justify-content: space-between; 
+  
+    width: 100%;
+    padding: 0;
 }
 
 .btn-floating {
@@ -184,7 +184,7 @@ body {
 
 @media screen and (min-width: 601px) {
 	div.mobilefriendlytext {
-	  font-size: 30px;
+    font-size: 30px;
 	}
 }
   
